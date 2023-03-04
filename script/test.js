@@ -19,29 +19,39 @@ questions[2] = "약속에 30분이나 지각한 친구에게 당신 해줄 말�
 questions[3] = "학교 체육수업에서 축구를 하게됐을 때, 당신이 맡고 싶은 포지션은? 1.골키퍼  2.공격수 3.미드필더  4.수비수 ";
 questions[4] = "당신이 좋아하는 음악의 장르는? 1.힙합 2.발라드 락 3.K팝 4.재즈";
 
-
+var esffre=0;                                                                                                                                                 
+var hotAme=0;
+var straw=0;
+var latte=0;
 
 
 for(i=0; i<5; i++){
-    esffre=0;
-    hotAme=0;
-    straw=0;
-    latte=0;
-   var ans = prompt(questions[i]);////
    
-    switch(ans){
-        case "1": this.esffre+1; break;
-        case "2": this.hotAme+1; break;
-        case "3": this.straw+1; break;
-        case "4": this.latte+1; break;
-        default: var reans = prompt("1, 2, 3, 4 중 하나를 입력해주십시오."+questions[i]); 
+   var ans = prompt(questions[i]);
+   var reans = parseInt(ans);
+    switch(reans){//switch는 상수(literal)값에 따라서 작동한다.//
+        case 1: 
+        esffre+1; 
+        break;
+
+        case 2: 
+        hotAme+1; 
+        break;
+
+        case 3: 
+        straw+1; 
+        break;
+
+        case 4: 
+        latte+1; 
+        break;
+
+        default: var requestion = prompt("1, 2, 3, 4 중 하나를 입력해주십시오."+questions[i]); 
        
     }   
-return esffre;
-return hotAme;
-return straw;
-return latte;
 }
+
+var result = "";
 
 if(hotAme==3){
     result="뜨거운 아메리카노";
